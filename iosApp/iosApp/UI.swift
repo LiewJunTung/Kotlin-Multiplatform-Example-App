@@ -6,13 +6,14 @@
 //
 
 import Foundation
-
+import UIKit
 import app
 
-class UI: Kotlinx_coroutines_core_nativeCoroutineDispatcher {
+public class UI: Kotlinx_coroutines_core_nativeCoroutineDispatcher {
     override public func dispatch(context: KotlinCoroutineContext, block: Kotlinx_coroutines_core_nativeRunnable) {
         DispatchQueue.main.async {
             block.run()
         }
     }
 }
+

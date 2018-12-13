@@ -48,6 +48,7 @@ kotlin {
                 implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
                 implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.0.1'
                 implementation "io.ktor:ktor-client:1.0.1"
+                implementation "io.ktor:ktor-client-core:1.0.1"
             }
         }
         commonTest {
@@ -72,6 +73,7 @@ kotlin {
             dependencies {
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:1.0.1"
                 implementation "io.ktor:ktor-client-ios:1.0.1"
+                implementation "io.ktor:ktor-client-core-ios:1.0.1"
             }
         }
         iosTest {

@@ -5,6 +5,7 @@ import kotlinx.coroutines.Runnable
 import platform.Foundation.NSRunLoop
 import platform.Foundation.performBlock
 import kotlin.coroutines.CoroutineContext
+import kotlin.native.concurrent.freeze
 
 actual class Sample {
     actual fun checkMe() = 7
@@ -20,5 +21,4 @@ object MainLoopDispatcher: CoroutineDispatcher() {
             block.run()
         }
     }
-
 }

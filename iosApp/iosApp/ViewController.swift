@@ -2,8 +2,14 @@ import UIKit
 import app
 
 class ViewController: UIViewController, SampleView, BaseView {
-    
-    
+    private lazy var presenter: SamplePresenter = { SamplePresenter(
+        uiContext: MainLoopDispatcher(),
+        baseView: self,
+        sampleView: self
+        )
+    }()
+    @IBOutlet weak var label: UILabel!
+   
     func showError(error: KotlinThrowable) {
         print(error.message)
     }
@@ -18,22 +24,17 @@ class ViewController: UIViewController, SampleView, BaseView {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
+        presenter.onDestroy()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("helo")
-        let presenter = SamplePresenter(
-            uiContext: UI() as! KotlinCoroutineContext,
-            baseView: self,
-            sampleView: self
-        )
         presenter.callSimpleApi()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    @IBOutlet weak var label: UILabel!
+   
 }
