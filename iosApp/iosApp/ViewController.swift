@@ -29,7 +29,6 @@ class ViewController: UIViewController, SampleView, BaseView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("helo")
         presenter.callSimpleApi()
     }
 

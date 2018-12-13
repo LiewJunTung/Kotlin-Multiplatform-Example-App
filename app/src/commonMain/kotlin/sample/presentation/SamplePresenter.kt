@@ -1,10 +1,8 @@
 package sample.presentation
 
-import io.ktor.client.HttpClient
-import io.ktor.client.request.*
-import io.ktor.http.takeFrom
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import sample.api.SampleApi
 import kotlin.coroutines.CoroutineContext
 
 
@@ -13,30 +11,21 @@ class SamplePresenter(
     baseView: BaseView,
     val sampleView: SampleView
 ) : CoroutinePresenter(uiContext, baseView) {
-    private val client = HttpClient()
+
+    private val api = SampleApi()
 
     fun callSimpleApi() {
         try {
             GlobalScope.launch(uiContext) {
-                getToolString()
+                val toolString = api.getToolString()
+                sampleView.returnString(toolString.hello)
             }
         } catch (e: Exception) {
             sampleView.returnString(e.toString())
         }
     }
 
-    suspend fun getToolString() = client.get<String> {
-        url("https://tools.ietf.org/rfc/rfc1866.txt")
-    }
-
     override fun onDestroy() {
         super.onDestroy()
-    }
-
-    private fun HttpRequestBuilder.apiUrl() {
-        url {
-            takeFrom("https://tools.ietf.org/rfc/rfc1866.txt")
-            //encodedPath = path
-        }
     }
 }
