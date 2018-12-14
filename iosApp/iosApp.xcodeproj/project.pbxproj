@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC54199021C397BF00FE457E /* AnotherPlatformFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC54198F21C397BF00FE457E /* AnotherPlatformFileManager.swift */; };
 		EC9DE12621C115AD0080B796 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DE12521C115AD0080B796 /* UI.swift */; };
 		F861D7E1207FA40F0085E80D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861D7E0207FA40F0085E80D /* AppDelegate.swift */; };
 		F861D7E3207FA40F0085E80D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861D7E2207FA40F0085E80D /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EC54198F21C397BF00FE457E /* AnotherPlatformFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherPlatformFileManager.swift; sourceTree = "<group>"; };
 		EC9DE12521C115AD0080B796 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		F861D7DD207FA40F0085E80D /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F861D7E0207FA40F0085E80D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				F861D7E9207FA4100085E80D /* LaunchScreen.storyboard */,
 				F861D7EC207FA4100085E80D /* Info.plist */,
 				EC9DE12521C115AD0080B796 /* UI.swift */,
+				EC54198F21C397BF00FE457E /* AnotherPlatformFileManager.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC54199021C397BF00FE457E /* AnotherPlatformFileManager.swift in Sources */,
 				F861D7E3207FA40F0085E80D /* ViewController.swift in Sources */,
 				F861D7E1207FA40F0085E80D /* AppDelegate.swift in Sources */,
 				EC9DE12621C115AD0080B796 /* UI.swift in Sources */,

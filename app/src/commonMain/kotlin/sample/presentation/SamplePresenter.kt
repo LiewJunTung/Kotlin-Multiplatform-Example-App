@@ -2,6 +2,7 @@ package sample.presentation
 
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import sample.SampleFileManager
 import sample.api.SampleApi
 import kotlin.coroutines.CoroutineContext
 
@@ -9,7 +10,8 @@ import kotlin.coroutines.CoroutineContext
 class SamplePresenter(
     val uiContext: CoroutineContext,
     baseView: BaseView,
-    val sampleView: SampleView
+    val sampleView: SampleView,
+    val fileManager: SampleFileManager
 ) : CoroutinePresenter(uiContext, baseView) {
 
     private val api = SampleApi()
@@ -23,6 +25,14 @@ class SamplePresenter(
         } catch (e: Exception) {
             sampleView.returnString(e.toString())
         }
+    }
+
+    fun readFile(){
+        fileManager.readFile()
+    }
+
+    fun writeFile(){
+        fileManager.saveFile()
     }
 
     override fun onDestroy() {

@@ -5,7 +5,8 @@ class ViewController: UIViewController, SampleView, BaseView {
     private lazy var presenter: SamplePresenter = { SamplePresenter(
         uiContext: MainLoopDispatcher(),
         baseView: self,
-        sampleView: self
+        sampleView: self,
+        fileManager: AnotherPlatformFileManager()
         )
     }()
     @IBOutlet weak var label: UILabel!
@@ -30,10 +31,17 @@ class ViewController: UIViewController, SampleView, BaseView {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.callSimpleApi()
+        readAndWriteFile()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+
+    }
+    
+    func readAndWriteFile(){
+        presenter.writeFile()
+        presenter.readFile()
     }
    
 }

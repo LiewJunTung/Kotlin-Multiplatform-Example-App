@@ -2,13 +2,29 @@ package sample
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Runnable
-import platform.Foundation.NSRunLoop
-import platform.Foundation.performBlock
+import platform.Foundation.*
 import kotlin.coroutines.CoroutineContext
-import kotlin.native.concurrent.freeze
 
 actual class Sample {
     actual fun checkMe() = 7
+
+    actual fun saveFile() {
+        val paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true)
+        val documentDirectory:NSString = paths[0] as NSString
+
+        val filePath = documentDirectory.stringByAppendingPathComponent("file.txt")
+
+        val str: NSString = ("Hello World JT Hey yo " as Any) as NSString
+        str.writeToFile(filePath, atomically = true, encoding = NSUTF8StringEncoding, error = null)
+    }
+
+    actual fun readFile() {
+        val paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true)
+        val documentDirectory:NSString = paths[0] as NSString
+        val filePath = documentDirectory.stringByAppendingPathComponent("file.txt")
+        val str = NSString.stringWithContentsOfFile(path=filePath, encoding=NSUTF8StringEncoding, error = null)
+        print(str)
+    }
 }
 
 actual object Platform {

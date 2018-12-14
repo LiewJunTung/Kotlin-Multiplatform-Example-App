@@ -2,11 +2,14 @@ package sample
 
 expect class Sample() {
     fun checkMe(): Int
+    fun saveFile()
+    fun readFile()
 }
 
 expect object Platform {
     val name: String
 }
+
 
 fun hello(): String = "Hello from ${Platform.name}"
 
