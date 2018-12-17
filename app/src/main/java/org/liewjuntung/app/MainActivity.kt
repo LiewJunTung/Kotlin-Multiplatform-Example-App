@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity(), BaseView, SampleView {
         button_database.setOnClickListener {
             presenter.readFile()
         }
+        button_shared_pref.setOnClickListener {
+            startExampleActivity(SharedPrefActivity::class.java)
+        }
 
     }
 

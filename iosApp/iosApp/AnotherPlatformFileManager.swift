@@ -8,7 +8,7 @@
 import Foundation
 import app
 
-class AnotherPlatformFileManager: NSObject, SampleFileManager {
+@objc class AnotherPlatformFileManager: NSObject, SampleFileManager {
     func saveFile() {
         let file = "file.txt" //this is the file. we will write to and read from it
         let text = "some text lololol" //just a text

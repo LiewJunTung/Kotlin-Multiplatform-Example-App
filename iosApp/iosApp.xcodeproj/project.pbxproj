@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC54199021C397BF00FE457E /* AnotherPlatformFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC54198F21C397BF00FE457E /* AnotherPlatformFileManager.swift */; };
+		EC6E1BBB21C77DD500BE59D0 /* SharedPref.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E1BBA21C77DD500BE59D0 /* SharedPref.swift */; };
 		EC9DE12621C115AD0080B796 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9DE12521C115AD0080B796 /* UI.swift */; };
 		F861D7E1207FA40F0085E80D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861D7E0207FA40F0085E80D /* AppDelegate.swift */; };
 		F861D7E3207FA40F0085E80D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861D7E2207FA40F0085E80D /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		EC54198F21C397BF00FE457E /* AnotherPlatformFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherPlatformFileManager.swift; sourceTree = "<group>"; };
+		EC6E1BBA21C77DD500BE59D0 /* SharedPref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPref.swift; sourceTree = "<group>"; };
 		EC9DE12521C115AD0080B796 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		F861D7DD207FA40F0085E80D /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F861D7E0207FA40F0085E80D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		F861D7DF207FA40F0085E80D /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				EC6E1BBA21C77DD500BE59D0 /* SharedPref.swift */,
 				F861D7E0207FA40F0085E80D /* AppDelegate.swift */,
 				F861D7E2207FA40F0085E80D /* ViewController.swift */,
 				F861D7E4207FA40F0085E80D /* Main.storyboard */,
@@ -254,7 +257,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT/../gradlew\" -p \"$SRCROOT/../app\" copyFramework \\\n-Pconfiguration.build.dir=\"$CONFIGURATION_BUILD_DIR\"          \\\n-Pkotlin.build.type=\"$KOTLIN_BUILD_TYPE\"                      \\\n-Pkotlin.target=\"$KOTLIN_TARGET\"";
+			shellScript = "\"$SRCROOT/../gradlew\" -p \"$SRCROOT/../app\" copyFramework \\\n-Pconfiguration.build.dir=\"$CONFIGURATION_BUILD_DIR\"          \\\n-Pkotlin.build.type=\"$KOTLIN_BUILD_TYPE\"                      \\\n-Pkotlin.target=\"$KOTLIN_TARGET\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -266,6 +269,7 @@
 				EC54199021C397BF00FE457E /* AnotherPlatformFileManager.swift in Sources */,
 				F861D7E3207FA40F0085E80D /* ViewController.swift in Sources */,
 				F861D7E1207FA40F0085E80D /* AppDelegate.swift in Sources */,
+				EC6E1BBB21C77DD500BE59D0 /* SharedPref.swift in Sources */,
 				EC9DE12621C115AD0080B796 /* UI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
