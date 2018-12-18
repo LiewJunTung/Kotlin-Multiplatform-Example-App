@@ -37,6 +37,9 @@ class MainActivity : AppCompatActivity(), BaseView, SampleView {
         button_shared_pref.setOnClickListener {
             startExampleActivity(SharedPrefActivity::class.java)
         }
+        button_database.setOnClickListener {
+            startExampleActivity(DatabaseActivity::class.java)
+        }
 
     }
 
